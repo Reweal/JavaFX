@@ -1,0 +1,20 @@
+.music-button {
+    -fx-background-color: #008CFA; /* Blue цвет */
+    -fx-text-fill: #ffffff; /* Белый текст */
+    -fx-border: none;
+    -fx-color: white;
+    -fx-background-radius: 5px; /* Скругление углов кнопки */
+    -fx-padding: 15px; /* Отступ внутри кнопки */
+}
+.music-button:hover {
+    -fx-background-color: #00ADFF; /* цвет фона кнопки при наведении */
+}
+.music-button:pressed {
+    -fx-background-color: #007FFF; /* цвет фона кнопки при нажатии */
+}
+.border-pane {
+    -fx-background-color: #909090; /* цвет */
+    -fx-background-image: url("../picture/kitty.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
