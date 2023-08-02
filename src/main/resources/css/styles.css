@@ -1,16 +1,47 @@
-.music-button {
-    -fx-background-color: #008CFA; /* Blue цвет */
+.choose-music-button {
+    -fx-background-color: #008CFAAF; /* Blue цвет */
     -fx-text-fill: #ffffff; /* Белый текст */
     -fx-border: none;
     -fx-color: white;
     -fx-background-radius: 5px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
 }
-.music-button:hover {
-    -fx-background-color: #00ADFF; /* цвет фона кнопки при наведении */
+.choose-music-button:hover {
+    -fx-background-color: #00ADFFAF; /* цвет фона кнопки при наведении */
 }
-.music-button:pressed {
-    -fx-background-color: #007FFF; /* цвет фона кнопки при нажатии */
+.choose-music-button:pressed {
+    -fx-background-color: #007FFFAF; /* цвет фона кнопки при нажатии */
+}
+.pause-music-button {
+    -fx-background-color: #9F0F0FAF; /* Blue цвет */
+    -fx-text-fill: #ffffff; /* Белый текст */
+    -fx-border: none;
+    -fx-color: white;
+    -fx-background-radius: 5px; /* Скругление углов кнопки */
+    -fx-padding: 15px; /* Отступ внутри кнопки */
+}
+.pause-music-button:hover {
+    -fx-background-color: #CF0F0FAF; /* цвет фона кнопки при наведении */
+}
+.pause-music-button:pressed {
+    -fx-background-color: #FF0F0FAF; /* цвет фона кнопки при нажатии */
+}
+.stop-music-button {
+    -fx-background-color: #9F0F0FAF; /* Blue цвет */
+    -fx-text-fill: #ffffff; /* Белый текст */
+    -fx-border: none;
+    -fx-color: white;
+    -fx-background-radius: 5px; /* Скругление углов кнопки */
+    -fx-padding: 15px; /* Отступ внутри кнопки */
+}
+.stop-music-button:hover {
+    -fx-background-color: #CF0F0FAF; /* цвет фона кнопки при наведении */
+}
+.stop-music-button:pressed {
+    -fx-background-color: #9F0F0FAF; /* цвет фона кнопки при нажатии */
+}
+.volume-slider .track {
+    -fx-background-color: #9F9F9FAF;
 }
 .border-pane {
     -fx-background-color: #909090; /* цвет */

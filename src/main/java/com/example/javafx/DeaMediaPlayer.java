@@ -8,7 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.Slider;
+import javafx.scene.layout.HBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
@@ -32,11 +34,15 @@ public class DeaMediaPlayer extends Application {
     private Button stopButton = new Button();
     @FXML
     private Slider volumeSlider = new Slider();
+    @FXML
+    private ProgressBar volumeProgressBar = new ProgressBar();
+    @FXML
+    private HBox controlBox = new HBox();
 
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DeaMediaPlayer.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 625, 225);
+        Scene scene = new Scene(fxmlLoader.load(), 650, 500);
         scene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
         stage.setTitle("Dea MediaPlayer");
         stage.setScene(scene);
@@ -67,6 +73,8 @@ public class DeaMediaPlayer extends Application {
             mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
             pauseButton.setText("Pause");
+            volumeSlider.setValue(1.0);
+            controlBox.setVisible(true);
         }
 
         volumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
