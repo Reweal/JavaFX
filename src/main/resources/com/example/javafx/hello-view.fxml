@@ -16,6 +16,9 @@
     <padding>
         <Insets bottom="5.0" top="5.0" left="5.0" right="5.0"/>
     </padding>
+    <top>
+        <ProgressBar fx:id="musicProgressBar" prefWidth="600" maxWidth="Infinity" styleClass="music-progress-bar" visible="false"/>
+    </top>
     <center>
         <VBox alignment="CENTER" spacing="20.0">
             <Button fx:id="playButton" text="Choose Music" onAction="#onPlayButtonClick"

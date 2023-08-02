@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import javafx.util.Duration;
 
 public class DeaMediaPlayer extends Application {
 
@@ -35,14 +36,14 @@ public class DeaMediaPlayer extends Application {
     @FXML
     private Slider volumeSlider = new Slider();
     @FXML
-    private ProgressBar volumeProgressBar = new ProgressBar();
+    private ProgressBar musicProgressBar = new ProgressBar();
     @FXML
     private HBox controlBox = new HBox();
 
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DeaMediaPlayer.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 650, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 650, 250);
         scene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
         stage.setTitle("Dea MediaPlayer");
         stage.setScene(scene);
@@ -75,7 +76,16 @@ public class DeaMediaPlayer extends Application {
             pauseButton.setText("Pause");
             volumeSlider.setValue(1.0);
             controlBox.setVisible(true);
+            musicProgressBar.setVisible(true);
         }
+
+        mediaPlayer.currentTimeProperty().addListener(new ChangeListener<Duration>() {
+            @Override
+            public void changed(ObservableValue<? extends Duration> observableValue,
+                Duration oldValue, Duration newValue) {
+                musicProgressBar.setProgress(newValue.toSeconds() / mediaPlayer.getTotalDuration().toSeconds());
+            }
+        });
 
         volumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {

@@ -44,8 +44,8 @@
     -fx-background-color: #9F9F9FAF;
 }
 .border-pane {
-    -fx-background-color: #909090; /* цвет */
-    -fx-background-image: url("../picture/kitty.png");
+    -fx-background-color: linear-gradient(to bottom, violet, deepskyblue); /* цвет */
+    -fx-background-image: url("../picture/blur.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
