@@ -3,25 +3,27 @@
     -fx-text-fill: #ffffff; /* Белый текст */
     -fx-border: none;
     -fx-color: white;
-    -fx-background-radius: 5px; /* Скругление углов кнопки */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
     -fx-font-family: "Jokerman";
     -fx-font-size: 14pt;
 }
 .choose-music-button:hover {
     -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
 }
 .choose-music-button:pressed {
     -fx-background-color: #200900; /* цвет фона кнопки при нажатии */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
 }
 .pause-music-button {
     -fx-background-color: #200900; /* Blue цвет */
     -fx-border: none;
     -fx-color: white;
-    -fx-background-radius: 1px; /* Скругление углов кнопки */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
 
-    -fx-background-image: url("../picture/buttons/pause.png");
+    -fx-background-image: url("../picture/buttons/dark/pauseDark(50percent).png");
     -fx-background-size: 75%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -29,20 +31,24 @@
     -fx-pref-width: 47px;
 }
 .pause-music-button:hover {
+    -fx-background-image: url("../picture/buttons/dark/pauseHoverDark(35percent).png");
     -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
 }
 .pause-music-button:pressed {
+    -fx-background-image: url("../picture/buttons/dark/pausePressedDark(20white).png");
     -fx-background-color: #200900FF; /* цвет фона кнопки при нажатии */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
     /*-fx-background-image: url("../picture/buttons/triangle.png");*/
 }
 .play-music-button {
     -fx-background-color: #200900; /* Blue цвет */
     -fx-border: none;
     -fx-color: white;
-    -fx-background-radius: 1px; /* Скругление углов кнопки */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
 
-    -fx-background-image: url("../picture/buttons/triangle.png");
+    -fx-background-image: url("../picture/buttons/dark/triangleDark(50percent).png");
     -fx-background-size: 75%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -50,20 +56,24 @@
     -fx-pref-width: 47px;
 }
 .play-music-button:hover {
+    -fx-background-image: url("../picture/buttons/dark/triangleHoverDark(35percent).png");
     -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
 }
 .play-music-button:pressed {
+    -fx-background-image: url("../picture/buttons/dark/trianglePressedDark(white).png");
     -fx-background-color: #200900FF; /* цвет фона кнопки при нажатии */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
     /*-fx-background-image: url("../picture/buttons/triangle.png");*/
 }
 .stop-music-button {
     -fx-background-color: #200900; /* Blue цвет */
     -fx-border: none;
     -fx-color: white;
-    -fx-background-radius: 1px; /* Скругление углов кнопки */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
 
-    -fx-background-image: url("../picture/buttons/stop.png");
+    -fx-background-image: url("../picture/buttons/dark/stopDark(50percent).png");
     -fx-background-size: 75%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
@@ -72,9 +82,13 @@
 }
 .stop-music-button:hover {
     -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
+    -fx-background-image: url("../picture/buttons/dark/stopHoverDark(35percent).png");
 }
 .stop-music-button:pressed {
     -fx-background-color: #2009001F; /* цвет фона кнопки при нажатии */
+    -fx-background-radius: 15px; /* Скругление углов кнопки */
+    -fx-background-image: url("../picture/buttons/dark/stopPressedDark(20white).png");
 }
 .volume-slider .track {
     -fx-background-color: #9F9F9FAF;
