@@ -1,51 +1,90 @@
 .choose-music-button {
-    -fx-background-color: #008CFAAF; /* Blue цвет */
+    -fx-background-color: #200900;
     -fx-text-fill: #ffffff; /* Белый текст */
     -fx-border: none;
     -fx-color: white;
     -fx-background-radius: 5px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
+    -fx-font-family: "Jokerman";
+    -fx-font-size: 14pt;
 }
 .choose-music-button:hover {
-    -fx-background-color: #00ADFFAF; /* цвет фона кнопки при наведении */
+    -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
 }
 .choose-music-button:pressed {
-    -fx-background-color: #007FFFAF; /* цвет фона кнопки при нажатии */
+    -fx-background-color: #200900; /* цвет фона кнопки при нажатии */
 }
 .pause-music-button {
-    -fx-background-color: #9F0F0FAF; /* Blue цвет */
-    -fx-text-fill: #ffffff; /* Белый текст */
+    -fx-background-color: #200900; /* Blue цвет */
     -fx-border: none;
     -fx-color: white;
-    -fx-background-radius: 5px; /* Скругление углов кнопки */
+    -fx-background-radius: 1px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
+
+    -fx-background-image: url("../picture/buttons/pause.png");
+    -fx-background-size: 75%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent;
+    -fx-pref-width: 47px;
 }
 .pause-music-button:hover {
-    -fx-background-color: #CF0F0FAF; /* цвет фона кнопки при наведении */
+    -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
 }
 .pause-music-button:pressed {
-    -fx-background-color: #FF0F0FAF; /* цвет фона кнопки при нажатии */
+    -fx-background-color: #200900FF; /* цвет фона кнопки при нажатии */
+    /*-fx-background-image: url("../picture/buttons/triangle.png");*/
 }
-.stop-music-button {
-    -fx-background-color: #9F0F0FAF; /* Blue цвет */
-    -fx-text-fill: #ffffff; /* Белый текст */
+.play-music-button {
+    -fx-background-color: #200900; /* Blue цвет */
     -fx-border: none;
     -fx-color: white;
-    -fx-background-radius: 5px; /* Скругление углов кнопки */
+    -fx-background-radius: 1px; /* Скругление углов кнопки */
     -fx-padding: 15px; /* Отступ внутри кнопки */
+
+    -fx-background-image: url("../picture/buttons/triangle.png");
+    -fx-background-size: 75%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent;
+    -fx-pref-width: 47px;
+}
+.play-music-button:hover {
+    -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
+}
+.play-music-button:pressed {
+    -fx-background-color: #200900FF; /* цвет фона кнопки при нажатии */
+    /*-fx-background-image: url("../picture/buttons/triangle.png");*/
+}
+.stop-music-button {
+    -fx-background-color: #200900; /* Blue цвет */
+    -fx-border: none;
+    -fx-color: white;
+    -fx-background-radius: 1px; /* Скругление углов кнопки */
+    -fx-padding: 15px; /* Отступ внутри кнопки */
+
+    -fx-background-image: url("../picture/buttons/stop.png");
+    -fx-background-size: 75%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent;
+    -fx-pref-width: 47px;
 }
 .stop-music-button:hover {
-    -fx-background-color: #CF0F0FAF; /* цвет фона кнопки при наведении */
+    -fx-background-color: #200900AF; /* цвет фона кнопки при наведении */
 }
 .stop-music-button:pressed {
-    -fx-background-color: #9F0F0FAF; /* цвет фона кнопки при нажатии */
+    -fx-background-color: #2009001F; /* цвет фона кнопки при нажатии */
 }
 .volume-slider .track {
     -fx-background-color: #9F9F9FAF;
 }
 .border-pane {
     -fx-background-color: linear-gradient(to bottom, violet, deepskyblue); /* цвет */
-    -fx-background-image: url("../picture/blur.png");
+    -fx-background-image: url("../picture/background/blur.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
+}
+#controlBox {
+    -fx-background-color: #200900; /* Здесь может быть любой цвет, который вам нужен */
 }

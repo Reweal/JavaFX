@@ -10,15 +10,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.StackPane?>
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.javafx.DeaMediaPlayer"
             styleClass="border-pane" minWidth="600" maxWidth="600" maxHeight="150" minHeight="75"
             prefWidth="600" prefHeight="135">
     <padding>
-        <Insets bottom="5.0" top="5.0" left="5.0" right="5.0"/>
+        <Insets bottom="0.1" top="5.0" left="0.1" right="0.1"/>
     </padding>
-    <top>
-        <ProgressBar fx:id="musicProgressBar" prefWidth="600" maxWidth="Infinity" styleClass="music-progress-bar" visible="false"/>
-    </top>
     <center>
         <VBox alignment="CENTER" spacing="20.0">
             <Button fx:id="playButton" text="Choose Music" onAction="#onPlayButtonClick"
@@ -26,11 +24,17 @@
         </VBox>
     </center>
     <bottom>
-        <HBox fx:id="controlBox" alignment="CENTER" spacing="20.0" styleClass="bottom-box" visible="false">
-            <Button fx:id="pauseButton" text="Pause Music" onAction="#onPauseButtonClick" styleClass="pause-music-button" visible="false"/>
-            <Button fx:id="stopButton" text="Stop Music" onAction="#onStopButtonClick" styleClass="stop-music-button" visible="false"/>
-            <Region HBox.hgrow="ALWAYS" />
-            <Slider fx:id="volumeSlider" max="1.0" value="1.0" prefWidth="200" maxWidth="200" minWidth="200" visible="false" styleClass="volume-slider"/>
-        </HBox>
+        <VBox alignment="CENTER">
+            <ProgressBar fx:id="musicProgressBar" prefWidth="580" maxWidth="Infinity"/>
+            <HBox fx:id="controlBox" alignment="CENTER" spacing="0" styleClass="bottom-box" visible="false"> <!-- spacing - расстояние между кнопками -->
+                <StackPane>
+                    <Button fx:id="onPauseButton" text="Pause Music" onAction="#onPauseButtonClick" styleClass="pause-music-button" visible="false"/>
+                    <Button fx:id="offPauseButton" text="Play Music" onAction="#offPauseButtonClick" styleClass="play-music-button" visible="false"/>
+                </StackPane>
+                <Button fx:id="stopButton" text="⏹" onAction="#onStopButtonClick" styleClass="stop-music-button" visible="false"/>
+                <Slider fx:id="volumeSlider" max="1.0" value="1.0" prefWidth="200" maxWidth="200" minWidth="200" visible="false" styleClass="volume-slider"/>
+                <Region HBox.hgrow="ALWAYS" />
+            </HBox>
+        </VBox>
     </bottom>
 </BorderPane>
