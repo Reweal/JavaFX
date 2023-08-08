@@ -69,7 +69,9 @@ public class DeaMediaPlayer extends Application {
 
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Audio Files", "*.wav", "*.mp3", "*.aac"));
-        selectedFile = fileChooser.showOpenDialog(null);
+        if (fileChooser != null) {
+            selectedFile = fileChooser.showOpenDialog(null);
+        }
 
         if (selectedFile != null) {
             Media sound = new Media(selectedFile.toURI().toString());
@@ -78,28 +80,28 @@ public class DeaMediaPlayer extends Application {
             volumeSlider.setValue(1.0);
             controlBox.setVisible(true);
             musicProgressBar.setVisible(true);
-        }
-
-        mediaPlayer.currentTimeProperty().addListener(new ChangeListener<Duration>() {
-            @Override
-            public void changed(ObservableValue<? extends Duration> observableValue, Duration oldValue, Duration newValue) {
-                musicProgressBar.setProgress(newValue.toSeconds() / mediaPlayer.getTotalDuration().toSeconds());
-            }
-        });
-
-        volumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                if (mediaPlayer != null) {
-                    mediaPlayer.setVolume(newValue.doubleValue());
+            
+            mediaPlayer.currentTimeProperty().addListener(new ChangeListener<Duration>() {
+                @Override
+                public void changed(ObservableValue<? extends Duration> observableValue, Duration oldValue, Duration newValue) {
+                    musicProgressBar.setProgress(newValue.toSeconds() / mediaPlayer.getTotalDuration().toSeconds());
                 }
-            }
-        });
+            });
 
-        playButton.setVisible(false);
-        onPauseButton.setVisible(true);
-        offPauseButton.setVisible(false);
-        stopButton.setVisible(true);
-        volumeSlider.setVisible(true);
+            volumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
+                public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                    if (mediaPlayer != null) {
+                        mediaPlayer.setVolume(newValue.doubleValue());
+                    }
+                }
+            });
+
+            playButton.setVisible(false);
+            onPauseButton.setVisible(true);
+            offPauseButton.setVisible(false);
+            stopButton.setVisible(true);
+            volumeSlider.setVisible(true);
+        }
     }
 
     @FXML
